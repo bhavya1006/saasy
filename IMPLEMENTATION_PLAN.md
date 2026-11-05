@@ -20,32 +20,32 @@
 
 ---
 
-## Phase 1 — Product UX & Vertical-Aware Onboarding ✅
+## Phase 1 — Product UX & Vertical-Aware Onboarding 🟡 Demo slice implemented
 
-- [x] Landing page with product value proposition (`/`)
-- [x] Onboarding wizard (`/onboarding` - URL, vertical, market, audience, price range, stage, goal, budget, 25km local radius)
-- [x] Workspace shell & navigation (`AppShell`, `Sidebar`, `Header`)
-- [x] Business profile review screen (`/profile`)
-- [x] Competitor review/approval screen (`/competitors` - approve/reject/expand relevance breakdown)
-- [x] Benchmark comparison view screen (`/comparisons` - observable signals only)
-- [x] SEO & AEO Analysis findings screen (`/seo` - code-level evidence & suggested fixes)
-- [x] Opportunities list screen (`/opportunities` - ranked priority score, effort/cost bands)
-- [x] 30-Day Action plan screen (`/plan` - interactive sprint checklist)
-- [x] Report & export snapshot screen (`/report` - Markdown export)
-- [x] Responsive layout with mobile/desktop accessibility
-- [x] Typed fixtures and live UI validation
-- [x] Production build pass without errors
+- [x] Single-route workspace shell and navigation (`app/page.tsx`)
+- [x] Business intake with browser-local persistence
+- [x] Profile review with evidence and unknown states
+- [x] Competitor review and approve/reject workflow
+- [x] Evidence-backed opportunity list with explainable hypothesis scores
+- [x] 30-day action plan with interactive task state
+- [x] Report snapshot with Markdown export
+- [x] Responsive layout with keyboard-accessible controls
+- [x] Typed demo fixtures and local demo-mode labeling
+- [x] Lint and production build pass without errors
+- [ ] Separate routes, server persistence, authentication, crawling, and live providers
 
-**Exit gate:** ✅ Complete mock E2E P0 journey works on mobile and desktop.
+**Exit gate:** 🟡 Coherent local demo journey works on mobile and desktop. Not a production P0 release.
 
 ---
 
-## Phase 2 & 3 Foundation Built 🔄
-- [x] Drizzle ORM Schema (`src/lib/db/schema.ts`) covering all canonical domain entities
-- [x] SSRF URL Validator with private network & metadata IP blocking (`src/lib/crawler/url-validator.ts`)
-- [x] Safe Bounded Crawler using Cheerio (`src/lib/crawler/safe-crawler.ts`)
-- [x] Deterministic SEO & Schema checker (`src/lib/analysis/seo-checks.ts`)
-- [x] REST API endpoints (`/api/audit/start`, `/api/audit/[id]/status`)
+## Phase 2 & 3 Foundation 🟡 Partial backend
+- [~] Initial Drizzle schema and SQL migration for projects/audits (`src/lib/db/schema.ts`, `db/migrations/0001_audit_foundation.sql`)
+- [~] Lazy PostgreSQL client and repository with explicit demo fallback
+- [~] Basic HTTP(S) URL guard for demo audit requests (`src/lib/audit/url.ts`)
+- [ ] SSRF URL validator with DNS and redirect checks
+- [ ] Bounded crawler and deterministic SEO/schema checker
+- [~] Demo audit API endpoints with PostgreSQL or in-memory job status (`app/api/audit/*`)
+- [ ] Persisted job status and audit evidence
 
 ---
 
